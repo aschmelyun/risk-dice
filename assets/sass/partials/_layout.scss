@@ -14,4 +14,21 @@ body {
 }
 .results {
     color: #fff;
+
+    table {
+        margin-top: 1rem;
+
+        tr {
+
+            td {
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                padding: 0.25rem 0;
+
+                &:last-child {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }

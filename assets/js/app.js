@@ -10,7 +10,10 @@ const app = new Vue({
         whiteDiceAmount: 2,
         redDice: [],
         whiteDice: [],
-        results: ''
+        results: {
+            red: 0,
+            white: 0
+        }
     },
     mounted() {
         this.getDiceRoll();
@@ -19,10 +22,11 @@ const app = new Vue({
         getDiceRoll: function() {
             this.redDice = [];
             this.whiteDice = [];
-            this.results = '';
+            this.results = {
+                red: 0,
+                white: 0
+            };
 
-            var redWins = 0;
-            var whiteWins = 0;
             var self = this;
 
             for (i = 0; i < this.redDiceAmount; i++) {
@@ -42,13 +46,11 @@ const app = new Vue({
 
             this.whiteDice.forEach(function(number, index) {
                 if(number >= self.redDice[index]) {
-                    whiteWins++;
+                    self.results.white++;
                 } else {
-                    redWins++;
+                    self.results.red++;
                 }
             });
-
-            this.results = 'Attacking Loses ' + whiteWins + '. Defending Loses ' + redWins + '.';
         },
         getRandomInt: function(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -1,0 +1,48 @@
+.dice-buttons {
+    
+    button {
+        color: #fff;
+        padding: 0;
+        border: 2px solid #fff;
+        background: none;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        line-height: 1rem;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+            background: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    span {
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+}
+.results {
+
+    button {
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        color: #222;
+        background: #fff;
+        border-radius: 0.25rem;
+        border: none;
+        width: 100%;
+        padding: 1rem 0;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+            background: #fff;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
