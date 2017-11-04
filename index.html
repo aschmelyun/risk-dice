@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>Risk Dice</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="/dist/css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
     </head>
     <body>
         <div class="wrapper" id="app">
             <div class="dice-container dice-red">
                 <div class="dice-buttons">
                     <button @click="redDiceAmount--">-</button>
-                    <span>{{ redDiceAmount }}</span>
+                    <span>{{ redDiceAmount }} Dice</span>
                     <button @click="redDiceAmount++">+</button>
                 </div>
                 <div class="dice-display">
@@ -19,7 +25,7 @@
             <div class="dice-container dice-white">
                 <div class="dice-buttons">
                     <button @click="whiteDiceAmount--">-</button>
-                    <span>{{ whiteDiceAmount }}</span>
+                    <span>{{ whiteDiceAmount }} Dice</span>
                     <button @click="whiteDiceAmount++">+</button>
                 </div>
                 <div class="dice-display">
