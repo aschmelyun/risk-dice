@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Risk Dice</title>
+        <link rel="stylesheet" type="text/css" href="/dist/css/app.css">
+    </head>
+    <body>
+        <div class="wrapper" id="app">
+            <div class="dice-container dice-red">
+                <div class="dice-buttons">
+                    <button @click="redDiceAmount--">-</button>
+                    <span>{{ redDiceAmount }}</span>
+                    <button @click="redDiceAmount++">+</button>
+                </div>
+                <div class="dice-display">
+                    <div class="dice red" v-for="dice in redDice" :class="'dice-' + dice"></div>
+                </div>
+            </div>
+            <div class="dice-container dice-white">
+                <div class="dice-buttons">
+                    <button @click="whiteDiceAmount--">-</button>
+                    <span>{{ whiteDiceAmount }}</span>
+                    <button @click="whiteDiceAmount++">+</button>
+                </div>
+                <div class="dice-display">
+                    <div class="dice white" v-for="dice in whiteDice" :class="'dice-' + dice"></div>
+                </div>
+            </div>
+            <div class="dice-container">
+                <button @click="getDiceRoll">Roll Dice</button>
+                <p class="results" v-text="results"></p>
+            </div>
+        </div>
+        <script type="text/javascript" src="/dist/js/app.js"></script>
+    </body>
+</html>

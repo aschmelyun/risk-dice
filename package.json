@@ -1,0 +1,24 @@
+{
+  "name": "risk-dice",
+  "version": "0.1.0",
+  "description": "A package for risk dice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "aschmelyun",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^5.1.1",
+    "jquery": "^3.2.1",
+    "laravel-mix": "^1.5.1",
+    "shake.js": "^1.2.2",
+    "vue": "^2.5.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0"
+  }
+}
